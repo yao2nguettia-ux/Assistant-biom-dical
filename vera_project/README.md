@@ -126,7 +126,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-L'interface est accessible sur **http://127.0.0.1:5000**.
+L'interface est accessible sur https://veraia.netlify.app/.
 
 ---
 

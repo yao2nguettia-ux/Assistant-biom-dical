@@ -1249,7 +1249,8 @@
       padding-bottom: 64px;
     }
 
-    @media (max-width:880px) {
+    /* ---------- Comprehensive Mobile & Smartphone Responsive Styles ---------- */
+    @media (max-width: 880px) {
       .app-shell {
         flex-direction: column;
       }
@@ -1258,27 +1259,184 @@
         width: 100%;
         height: auto;
         position: sticky;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 14px;
-        padding: 14px 20px;
-        z-index: 20;
+        top: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px 16px;
+        z-index: 1000;
+        border-right: none;
+        border-bottom: 2px solid #CBD5E1;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
       }
 
-      .sidebar .eyebrow {
-        display: none;
+      .sidebar .brand-header {
+        margin-bottom: 8px;
+        justify-content: space-between;
+      }
+
+      .system-status-badge {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 4px 10px;
+        font-size: 0.68rem;
       }
 
       .side-nav {
         flex-direction: row;
-        margin-top: 0;
-        flex: 0 0 auto;
-        flex-wrap: wrap;
+        margin-top: 6px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 6px;
+      }
+
+      .side-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-item {
+        padding: 9px 14px;
+        font-size: 0.84rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+        border-radius: 8px;
       }
 
       .sidebar-foot {
         display: none;
+      }
+
+      .view .wrap {
+        padding-top: 24px;
+        padding-bottom: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero-head {
+        margin-bottom: 24px;
+      }
+
+      .hero-head h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-head p {
+        font-size: 0.96rem;
+      }
+
+      .panel,
+      .doc-card {
+        padding: 18px 16px;
+        min-height: auto;
+      }
+
+      textarea#question {
+        min-height: 100px;
+        font-size: 16px;
+      }
+
+      textarea#context {
+        min-height: 140px;
+        font-size: 16px;
+      }
+
+      #keywordSearch {
+        font-size: 16px;
+      }
+
+      .examples {
+        gap: 6px;
+      }
+
+      .chip {
+        font-size: 0.76rem;
+        padding: 7px 12px;
+      }
+
+      button.primary {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+      }
+
+      .toast-container {
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+      }
+
+      .toast-item {
+        font-size: 0.82rem;
+        padding: 10px 14px;
+      }
+
+      .verdict-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .confidence-wrap {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .batch-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+      }
+
+      .batch-table {
+        border: none;
+        min-width: 580px;
+      }
+    }
+
+    /* ---------- Ultra-wide & Laptop Responsive Enhancements ---------- */
+    @media (min-width: 1400px) {
+      .wrap {
+        max-width: 1360px;
+        padding: 0 40px;
+      }
+      .console {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-head h1 {
+        font-size: 1.45rem;
+      }
+
+      .hero-head p {
+        font-size: 0.9rem;
+      }
+
+      .nav-item {
+        padding: 8px 11px;
+        font-size: 0.8rem;
+      }
+
+      .nav-item svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .chip {
+        width: 100%;
+        text-align: center;
+      }
+
+      .ghost-btn {
+        width: 100%;
+        justify-content: center;
       }
     }
 

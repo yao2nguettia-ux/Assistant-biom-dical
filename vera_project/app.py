@@ -56,8 +56,9 @@ except Exception as err:
 
 @app.route("/")
 def index():
-    """Sert l'interface web principale (vera.html)."""
-    return send_from_directory(STATIC_DIR, "vera.html")
+    """Sert l'interface web principale (index.html ou vera.html)."""
+    filename = "index.html" if os.path.exists(os.path.join(STATIC_DIR, "index.html")) else "vera.html"
+    return send_from_directory(STATIC_DIR, filename)
 
 
 @app.route("/api/analyze", methods=["POST"])
